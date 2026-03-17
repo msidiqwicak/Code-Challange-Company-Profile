@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #9333ea; 
+  --color-dark: #020617;  
+}
+
+@layer base {
+  html { font-family: var(--font-sans); scroll-behavior: smooth; }
+  body { @apply bg-dark text-slate-100; }
+}
