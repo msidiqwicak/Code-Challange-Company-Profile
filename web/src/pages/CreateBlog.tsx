@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
-// import { blogService } from "../../../api/blogService";
+import { blogService } from "../../../api/blogService";
 
 const CreateBlog = () => {
   const { isAuthenticated, admin } = useAuthStore();
@@ -34,7 +34,7 @@ const CreateBlog = () => {
         admin_id: admin.id,
       };
 
-      // await blogService.create(finalData);
+      await blogService.create(finalData);
 
       alert("🚀 Blog Published successfully!");
 
